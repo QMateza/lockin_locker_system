@@ -30,17 +30,23 @@ require base_path('views/header.views.php');
 
       <div class="inner_container">
         <h1>Signup</h1>
-        <h5>Your space, your locker — log in to manage it.</h5>
-        <form action="" class="form_container">
+        <p>Your space, your locker — signup to get yours.</p>
+        <form action="/register" method="POST" class="form_container">
+          <label for="title">Title</label>
           <select name="title" id="" class="input">
             <option value="">Mr</option>
             <option value="">Ms</option>
             <option value="">Mrs</option>
+            <option value="">Dr</option>
+            <option value="">Prof</option>
           </select>
+          <label for="name">Name</label>
           <input type="text" name="name" placeholder="eg: John Doe" class="input">
+          <label for="email">Email</label>
           <input type="email" name="email" placeholder="eg: name@email.com" class="input">
+          <label for="password">Password</label>
           <input type="password" name="password" placeholder="Password" class="input">
-          <input type="submit" value="Sign Up" class="submit_button" class="input">
+          <button type="submit" class="submit_button">Sign up</button>
         </form>
         <p>Already have an account? <a href="">Login</a></p>
       </div>
