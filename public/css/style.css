@@ -29,33 +29,39 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.one-half {
+  width: 50%;
+}
+
+aside {
+  position: relative;
+  overflow: hidden;
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--lavender-web);
+}
+
+.login picture,
+.login img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 40px);
-}
-
-.container picture,
-.container img {
-  width: 10em;
-  margin-bottom: 0.5em;
-}
-
-.welcome {
-  margin-bottom: 20px;
-}
-
-.welcome h1 {
-  margin-bottom: 15px;
-  color: var(--yale-blue);
-}
-
-.inner_container {
-  border: 1px solid hsl(0, 0%, 60%);
-  padding: 30px;
-  border-radius: 5px;
 }
 
 .inner_container p {
