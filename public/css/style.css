@@ -9,6 +9,11 @@
   --myrtle-green: rgba(42, 116, 116, 1);
   --saffron: #f8c630ff;
   --moonstone: #609fafff;
+
+  --font-size-sm: 0.8em;
+  --font-size-reg: 1em;
+  --font-size-med: 1.4;
+  --font-size-lrg: 2em;
 }
 
 *,
@@ -20,7 +25,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Poppins, sans-serif;
   background-color: var(--lavender-web);
   color: var(--font-color);
 }
@@ -64,26 +69,34 @@ aside {
   align-items: center;
 }
 
+.inner_container {
+  width: 60%;
+}
+
+.inner_container h1 {
+  margin-bottom: 0.3em;
+  font-weight: 800;
+}
+
 .inner_container p {
-  font-size: 0.7em;
-  text-align: center;
+  font-size: var(--font-size-reg);
+}
+
+.inner_container label {
+  font-size: var(--font-size-sm);
+  margin-bottom: 0.2em;
 }
 
 .form_container {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.inner_container h1 {
-  margin-bottom: 30px;
-  font-weight: 800;
-  text-align: center;
+  margin-top: 2em;
 }
 
 .input {
-  padding: 3px;
-  margin-bottom: 15px;
+  padding: 0.8em;
+  margin-bottom: 1em;
   border: 1px solid hsl(0, 0%, 60%);
   border-radius: 4px;
   color: var(--font-color);
@@ -91,15 +104,15 @@ aside {
 
 footer p {
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 2em;
   font-size: 0.8em;
   color: hsl(0, 0%, 60%);
 }
 
 .submit_button {
-  padding: 0.5em;
-  margin-bottom: 10px;
-  color: #333;
+  padding: 0.8em;
+  margin-bottom: 0.5em;
+  color: var(--font-color);
   background-color: var(--saffron);
   border: none;
   border-radius: 5px;
