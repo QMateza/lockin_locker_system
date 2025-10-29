@@ -9,7 +9,7 @@ class Authenticator
 {
   public function attempt($email, $password)
   {
-    $user = new Database()->query('select * from users where email = :email', [
+    $user = (new Database())->query('select * from parent where email_address = :email', [
       ':email' => $email
     ])->find();
 

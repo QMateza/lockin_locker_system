@@ -31,9 +31,8 @@ require base_path('views/header.views.php');
       <div class="inner_container">
         <h1>Login</h1>
         <p>Your space, your locker — signup to get yours.</p>
-        <form action="/register" method="POST" class="form_container">
+        <form action="/session" method="POST" class="form_container">
           <fieldset>
-            <legend>Contact</legend>
             <label for="email">Email</label>
             <input type="email" name="email" placeholder="eg: name@email.com" class="input">
             <label for="password">Password</label>
@@ -42,7 +41,7 @@ require base_path('views/header.views.php');
 
           <button type="submit" class="submit_button">Login</button>
         </form>
-        <p>Don't have an account yet? <a href="">Signup</a></p>
+        <p>Don't have an account yet? <a href="/register">Signup</a></p>
       </div>
       <footer>
         <p>Student Locker Booking System. Copyright &#169; <?= date('Y') ?></p>
