@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font-color: hsl(0, 0%, 16%);
+
+  /* CSS HSL */
+  --yale-blue: rgba(1, 55, 126, 1);
+  --lavender-web: #f0f0ffff;
+  --myrtle-green: rgba(42, 116, 116, 1);
+  --saffron: #f8c630ff;
+  --moonstone: #609fafff;
+
+  --font-size-sm: 0.8em;
+  --font-size-reg: 1em;
+  --font-size-med: 1.4;
+  --font-size-lrg: 2em;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: var(--lavender-web);
+  color: var(--font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.one-half {
+  width: 50%;
+}
+
+aside {
+  position: relative;
+  overflow: hidden;
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--lavender-web);
+}
+
+.login picture,
+.login img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner_container {
+  width: 80%;
+}
+
+.inner_container h1 {
+  font-weight: 800;
+}
+
+.inner_container p {
+  font-size: var(--font-size-reg);
+}
+
+.inner_container label {
+  font-size: var(--font-size-sm);
+  margin-bottom: 0.2em;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  margin: 2em 0;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em;
+  border: none;
+}
+
+.input {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 4px;
+  color: var(--font-color);
+}
+
+.submit_button {
+  padding: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: var(--font-color);
+  background-color: var(--saffron);
+  border: none;
+  border-radius: 5px;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 0.8em;
+  color: hsl(0, 0%, 60%);
+}
