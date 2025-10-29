@@ -70,11 +70,10 @@ aside {
 }
 
 .inner_container {
-  width: 60%;
+  width: 80%;
 }
 
 .inner_container h1 {
-  margin-bottom: 0.3em;
   font-weight: 800;
 }
 
@@ -90,16 +89,36 @@ aside {
 .form_container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-top: 2em;
+  gap: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  margin: 2em 0;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em;
+  border: none;
 }
 
 .input {
   padding: 0.8em;
   margin-bottom: 1em;
-  border: 1px solid hsl(0, 0%, 60%);
+  border: none;
   border-radius: 4px;
   color: var(--font-color);
+}
+
+.submit_button {
+  padding: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: var(--font-color);
+  background-color: var(--saffron);
+  border: none;
+  border-radius: 5px;
 }
 
 footer p {
@@ -107,13 +126,4 @@ footer p {
   margin-top: 2em;
   font-size: 0.8em;
   color: hsl(0, 0%, 60%);
-}
-
-.submit_button {
-  padding: 0.8em;
-  margin-bottom: 0.5em;
-  color: var(--font-color);
-  background-color: var(--saffron);
-  border: none;
-  border-radius: 5px;
 }
