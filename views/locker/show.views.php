@@ -1,4 +1,5 @@
 <?php
+// dd($_SESSION);
 require base_path('views/header.views.php');
 ?>
 
@@ -23,6 +24,7 @@ require base_path('views/header.views.php');
 
   </header>
   <main>
+    <h1>Hello, <?= $_SESSION['user']['first_name'] ?></h1>
     <section>
       <div class="student-details card">
         <h3>Student details</h3>

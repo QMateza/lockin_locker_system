@@ -13,11 +13,11 @@ class Authenticator
       ':email' => $email
     ])->find();
 
-
     if ($user) {
       if (password_verify($password, $user['password'])) {
         $this->login([
-          'email' => $email
+          'email' => $user['email_address'],
+          'first_name' => $user['first_name']
         ]);
         return true;
       }
@@ -27,7 +27,8 @@ class Authenticator
   public function login($user)
   {
     $_SESSION['user'] = [
-      'email' => $user['email']
+      'email' => $user['email'],
+      'first_name' => $user['first_name']
     ];
   }
 
