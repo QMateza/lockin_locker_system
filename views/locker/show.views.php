@@ -15,7 +15,7 @@ require base_path('views/header.views.php');
           <li>Contact us</li>
         </ul>
       </nav>
-      <form action="/session" method="post">
+      <form action="/session" method="POST">
         <input type="hidden" name="_method" value="delete">
         <button>Logout</button>
       </form>
