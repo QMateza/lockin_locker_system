@@ -8,7 +8,7 @@ $router->get('/', 'index.php');
 $router->get('/about', 'about.php');
 $router->get('/contact', 'contact.php');
 
-$router->get('/notes', 'notes/index.php')->only('auth');
+$router->get('/locker', 'locker/manage.php');
 $router->get('/note', 'notes/show.php');
 $router->delete('/note', 'notes/destroy.php');
 
@@ -23,4 +23,4 @@ $router->post('/register', 'registration/store.php');
 
 $router->get('/login', 'session/create.php');
 $router->post('/session', 'session/store.php');
-$router->delete('/session', 'session/destroy.php')->only('auth');
+$router->delete('/session', 'session/destroy.php');
