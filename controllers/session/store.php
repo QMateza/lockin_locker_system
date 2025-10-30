@@ -11,7 +11,7 @@ $form = LoginForm::validate($attributes = [
 ]);
 
 if ((new Authenticator)->attempt($attributes['email'], $attributes['password'])) {
-  redirect('/');
+  redirect('/locker');
 }
 
 $form->error('email', 'No matching account found for that email address and password.');
