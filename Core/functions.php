@@ -2,14 +2,16 @@
 
 use Core\Response;
 
-function dd($value) {
+function dd($value)
+{
   echo "<pre>";
   var_dump($value);
   echo "</pre>";
   die();
 }
 
-function abort($value = 404) {
+function abort($value = 404)
+{
   http_response_code($value);
   require base_path("views/{$value}.php");
   die();
@@ -20,12 +22,12 @@ function urlIs($value)
   return $_SERVER['REQUEST_URI'] === $value;
 }
 
-function authorize($condition, $status = Response::FORBIDDEN)
-{
-  if (! $condition) {
-    abort($status);
-  }
-}
+// function authorize($condition, $status = Response::FORBIDDEN)
+// {
+//   if (! $condition) {
+//     abort($status);
+//   }
+// }
 
 function base_path($path)
 {

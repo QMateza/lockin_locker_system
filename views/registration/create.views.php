@@ -31,7 +31,7 @@ require base_path('views/head.views.php');
       <div class="inner_container">
         <h1>Signup</h1>
         <p>Your space, your locker — signup to get yours.</p>
-        <form action="/register" method="POST" class="form_container">
+        <form action="/register" method="POST" class="form_container form_overflow">
           <fieldset>
             <legend>Contact</legend>
             <label for="title">Title</label>

@@ -1,7 +1,6 @@
 <?php
-// dd($_SESSION);
 require base_path('views/head.views.php');
-require base_path('views/header.php');
+require base_path('views/header.views.php');
 ?>
 
 
@@ -25,13 +24,13 @@ require base_path('views/header.php');
       <p>Something else comes here.</p>
       <div class="available-lockers">
         <div>
-          hello
+          <p>F23</p>
+          <a href="/locker/create">Apply for locker</a>
         </div>
       </div>
     </div>
   </section>
 </main>
-
 
 </body>
 
