@@ -9,7 +9,7 @@ $router->get('/about', 'about.php');
 $router->get('/contact', 'contact.php');
 
 $router->get('/locker', 'locker/manage.php');
-$router->get('/note', 'notes/show.php');
+$router->get('/locker/create', 'locker/create.php');
 $router->delete('/note', 'notes/destroy.php');
 
 $router->get('/note/edit', 'notes/edit.php');
