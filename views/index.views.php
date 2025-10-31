@@ -1,5 +1,5 @@
 <?php
-require base_path('views/header.views.php');
+require base_path('views/head.views.php');
 ?>
 
 <body>
