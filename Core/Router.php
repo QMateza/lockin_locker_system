@@ -2,7 +2,8 @@
 
 namespace Core;
 
-class Router{
+class Router
+{
   protected $routes = [];
 
   public function add($method, $uri, $controller)
@@ -17,7 +18,7 @@ class Router{
     return $this;
   }
 
-public function get($uri, $controller)
+  public function get($uri, $controller)
   {
     return $this->add('GET', $uri, $controller);
   }
@@ -54,11 +55,11 @@ public function get($uri, $controller)
     foreach ($this->routes as $route) {
       if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
 
-        if ($route['middleware']) {
-          $middleware = Middleware::MAP[$route['middleware']];
+        // if ($route['middleware']) {
+        //   $middleware = Middleware::MAP[$route['middleware']];
 
-          (new $middleware)->handle();
-        }
+        //   (new $middleware)->handle();
+        // }
         return require base_path('controllers/' . $route['controller']);
       }
     }

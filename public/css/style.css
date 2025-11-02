@@ -194,7 +194,7 @@ main section {
 }
 
 .card {
-  width: calc(50% - 1em);
+  width: calc(100% - 1em);
   padding: 2.5em 5em 2.5em 2em;
   background-color: var(--moonstone);
   border-radius: 8px;
@@ -203,6 +203,13 @@ main section {
 
 .card h3 {
   margin-bottom: 1em;
+}
+
+.divider {
+  width: 60%;
+  height: 3px;
+  text-align: center;
+  background-color: rgb(84, 84, 84);
 }
 
 .lockers-container {

@@ -5,12 +5,12 @@ require base_path('views/header.views.php');
 
 
 <main class="locker-form">
-  <h3>Apply for locker <span>F23</span></h3>
-  <form action="" method="POST" class="form_container">
+  <h3>Apply for locker no: <span><?= $locker_id ?></span></h3>
+  <form action="/locker/store" method="POST" class="form_container">
     <fieldset>
       <legend>Student Details</legend>
       <p class="subheading">Enter student details below to apply for a locker.</p>
-      <label for="name">Student number:</label>
+      <label for="student number">Student number:</label>
       <input type="text" placeholder="eg. 00000" name="student_number" class="input">
       <label for="name">Name</label>
       <input type="text" name="name" placeholder="eg. John Doe" class="input">
