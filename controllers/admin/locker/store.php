@@ -9,6 +9,14 @@ if ($_POST['action'] === 'approve') {
     ':student_number' => $_POST['student_number'],
     ':locker_id' => $_GET['locker_id']
   ]);
+
+  $locker_id = $db->query('select booked_locker_id from bookedlocker where locker_id = :locker_id', [
+    ':locker_id' => $_GET['locker_id']
+  ])->find();
+
+  $db->query('update locker SET booked_locker_id = :booked_locker_id WHERE (locker_id = :locker_id);', [
+    ':booked_locker_id' => $locker_id
+  ]);
 }
 
 
