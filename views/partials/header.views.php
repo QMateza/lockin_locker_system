@@ -1,8 +1,11 @@
 <body>
   <header>
-    <picture>
-      <source media="(min-width: 768px)" srcset="/img/logo-small.png" type="image/png"><img src="" alt="">
-    </picture>
+    <a href="/">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/img/logo-small.png" type="image/png"><img src="" alt="">
+      </picture>
+    </a>
+
     <div class="nav-links">
       <nav>
         <ul>
