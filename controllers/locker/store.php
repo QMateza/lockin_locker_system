@@ -6,6 +6,7 @@ use Core\Validator;
 $student_number = $_POST['student_number'];
 $name = $_POST['name'];
 $grade = $_POST['grade'];
+$locker_id = $_POST['locker_id'];
 
 if (!Validator::string($student_number, 5, 5)) {
   $errors['student_number'] = 'Please enter the correct students\' student number.';
@@ -41,10 +42,11 @@ if ($student) {
     ':grade' => $grade,
   ]);
 
-  $db->query('insert into waitinglist(student_number, waiting_for_payment, waiting_for_locker) values(:student_number, :payment, :locker)', [
+  $db->query('insert into waitinglist(student_number, waiting_for_payment, waiting_for_locker, locker_id) values(:student_number, :payment, :locker, :locker_id)', [
     ':student_number' => $student_number,
     ':payment' => 1,
-    ':locker' => 0
+    ':locker' => 0,
+    ':locker_id' => $locker_id
   ]);
 
   header('location: /');
