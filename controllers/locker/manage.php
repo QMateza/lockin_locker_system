@@ -5,7 +5,7 @@ use Core\Database;
 $db = new Database();
 
 $student = $db->query('select * from student where parent_id = :parent_id', [
-  ':parent_id' => $_SESSION['user']['parent_id']
+  ':parent_id' => $_SESSION['user']['parent_id'] ?? 0
 ])->get();
 
 $locker = $db->query('select * from locker')->get();

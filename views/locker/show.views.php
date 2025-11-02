@@ -1,8 +1,7 @@
 <?php
-require base_path('views/head.views.php');
-require base_path('views/header.views.php');
+require base_path('views/partials/head.views.php');
+require base_path('views/partials/header.views.php');
 ?>
-
 
 <main>
   <h1>Hello, <?= $_SESSION['user']['first_name'] ?></h1>
@@ -21,14 +20,13 @@ require base_path('views/header.views.php');
             <p>Locker id: locker id</p>
             <p>Date: Date</p>
           </div>
-
-
         </div>
       </section>
       <div class="divider"></div>
     <?php endforeach ?>
   <?php else : ?>
     <p>You have not booked a locker yet.</p>
+    <div class="divider"></div>
   <?php endif ?>
 
   <section>

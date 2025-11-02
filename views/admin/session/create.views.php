@@ -6,9 +6,8 @@ require base_path('views/partials/aside.views.php');
 <div class="container one-half">
 
   <div class="inner_container">
-    <h1>Login</h1>
-    <p>Your space, your locker — signup to get yours.</p>
-    <form action="/session" method="POST" class="form_container">
+    <h1>Admin Login</h1>
+    <form action="/admin/session/create" method="POST" class="form_container">
       <fieldset>
         <label for="email">Email</label>
         <input type="email" name="email" placeholder="eg: name@email.com" class="input">
@@ -18,8 +17,7 @@ require base_path('views/partials/aside.views.php');
 
       <button type="submit" class="submit_button">Login</button>
     </form>
-    <p>Don't have an account yet? <a href="/register">Signup</a></p>
-    <p>Administrator login. <a href="/admin/create">Here</a></p>
+    <p>Don't have an account yet? <a href="/admin/register">Admin Signup</a></p>
   </div>
   <footer>
     <p>Student Locker Booking System. Copyright &#169; <?= date('Y') ?></p>
