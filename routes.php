@@ -10,6 +10,7 @@ $router->get('/contact', 'contact.php');
 
 $router->get('/locker', 'locker/manage.php');
 $router->get('/locker/create', 'locker/create.php');
+$router->post('/locker/store', 'locker/store.php');
 $router->delete('/note', 'notes/destroy.php');
 
 $router->get('/note/edit', 'notes/edit.php');

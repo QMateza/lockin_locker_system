@@ -14,27 +14,20 @@ class Authenticator
       ':email' => $email
     ])->find();
 
-    $student = $db->query('select * from student where parent_id = :parentId', [
-      ':parentId' => 3
-    ])->find();
 
-    // dd($student);
     if ($user && password_verify($password, $user['password'])) {
-      $this->login($user, $student);
+
+      $this->login($user);
       return true;
     }
   }
 
-  public function login($user, $student)
+  public function login($user)
   {
     $_SESSION['user'] = [
       'email' => $user['email_address'],
-      'first_name' => $user['first_name']
-    ];
-    $_SESSION['student'] = [
-      'first_name' => $student['first_name'],
-      'last_name' => $student['last_name'],
-      'grade' => $student['grade']
+      'first_name' => $user['first_name'],
+      'parent_id' => $user['parent_id']
     ];
   }
 
