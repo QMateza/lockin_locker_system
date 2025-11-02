@@ -21,7 +21,7 @@ $router->post('/admin/session/create', 'admin/session/store.php');
 $router->get('/admin/register', 'admin/registration/create.php');
 $router->post('/admin/register', 'admin/registration/store.php');
 
-$router->patch('/note', 'notes/update.php');
+$router->post('/locker/decision', 'admin/locker/store.php');
 
 $router->get('/notes/create', 'notes/create.php');
 $router->post('/notes', 'notes/store.php');

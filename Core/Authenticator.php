@@ -4,7 +4,6 @@ namespace Core;
 
 use Core\Database;
 
-
 class Authenticator
 {
   public function attempt($email, $password, $table)
@@ -23,7 +22,8 @@ class Authenticator
   {
     $_SESSION['user'] = [
       'email' => $user['email'],
-      'first_name' => $user['first_name']
+      'first_name' => $user['first_name'],
+      'parent_id' => $user['parent_id'] ?? null
     ];
   }
 

@@ -206,6 +206,7 @@ main section {
 }
 
 .divider {
+  margin: 0 auto;
   width: 60%;
   height: 3px;
   text-align: center;
@@ -243,4 +244,28 @@ main section {
 .locker-form .subheading {
   margin-bottom: 2em;
   font-size: var(--font-size-sm);
+}
+
+.locker-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+
+.locker-btn {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.locker-btn button {
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: red;
+}
+
+.locker-btn .success {
+  background-color: #56b544;
 }

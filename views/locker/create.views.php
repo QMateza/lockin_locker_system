@@ -1,12 +1,13 @@
 <?php
-require base_path('views/head.views.php');
-require base_path('views/header.views.php');
+require base_path('views/partials/head.views.php');
+require base_path('views/partials/header.views.php');
 ?>
 
 
 <main class="locker-form">
   <h3>Apply for locker no: <span><?= $locker_id ?></span></h3>
   <form action="/locker/store" method="POST" class="form_container">
+    <input type="hidden" name="locker_id" value="<?= $locker_id ?>">
     <fieldset>
       <legend>Student Details</legend>
       <p class="subheading">Enter student details below to apply for a locker.</p>
