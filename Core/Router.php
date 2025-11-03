@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use Core\Middleware\Middleware;
+
 class Router
 {
   protected $routes = [];
@@ -55,11 +57,11 @@ class Router
     foreach ($this->routes as $route) {
       if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
 
-        // if ($route['middleware']) {
-        //   $middleware = Middleware::MAP[$route['middleware']];
+        if ($route['middleware']) {
+          $middleware = Middleware::MAP[$route['middleware']];
 
-        //   (new $middleware)->handle();
-        // }
+          (new $middleware)->handle();
+        }
         return require base_path('controllers/' . $route['controller']);
       }
     }
