@@ -1,6 +1,7 @@
 <?php
 
 use Core\Database;
+use Core\Email;
 use Core\Validator;
 
 $student_number = $_POST['student_number'];
@@ -48,6 +49,8 @@ if ($student) {
     ':locker' => 0,
     ':locker_id' => $locker_id
   ]);
+
+  (new Email)->sendLockerApplicationEmail($_SESSION['user']['email'], $student_number, $locker_id);
 
   header('location: /');
   die();

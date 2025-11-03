@@ -24,7 +24,7 @@ require base_path('views/partials/header.views.php');
               </button>
             </form>
 
-            <form action="/locker/decision" method="POST">
+            <form action="/locker/decision?locker_id=<?= $locker['locker_id'] ?>" method="POST">
               <input type="hidden" name="student_number" value="<?= $locker['student_number'] ?>">
               <button type="submit" name="action" value="decline" class="danger">
                 Decline
