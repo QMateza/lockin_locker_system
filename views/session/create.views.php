@@ -1,6 +1,7 @@
 <?php
 require base_path('views/partials/head.views.php');
 require base_path('views/partials/aside.views.php');
+
 ?>
 
 <div class="container one-half">
@@ -18,6 +19,9 @@ require base_path('views/partials/aside.views.php');
         <label for="password">Password</label>
         <input type="password" name="password" placeholder="Password" class="input">
       </fieldset>
+      <?php if (isset($errors['body'])) : ?>
+        <p class=".err-msg"><?= $errors['body'] ?></p>
+      <?php endif ?>
 
       <button type="submit" class="submit_button">Login</button>
     </form>

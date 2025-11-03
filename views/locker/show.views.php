@@ -12,13 +12,13 @@ require base_path('views/partials/header.views.php');
         <div class="student-details card">
           <div>
             <h3>Student details</h3>
-            <p>Name: <?= $student['first_name'] . " " . $student['last_name'] ?></p>
-            <p>Grade: <?= $student['grade'] ?></p>
+            <p>Name: <?= $student['student_first_name'] . " " . $student['student_last_name'] ?></p>
+            <p>Grade: <?= $student['student_grade'] ?></p>
           </div>
           <div>
             <h3>Locker details</h3>
-            <p>Locker id: locker id</p>
-            <p>Date: Date</p>
+            <p>Locker id: <?= $student['locker_id'] ?></p>
+            <p>Date: <?= $student['date'] ?></p>
           </div>
         </div>
       </section>
