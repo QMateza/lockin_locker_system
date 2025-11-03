@@ -7,6 +7,9 @@ require base_path('views/partials/aside.views.php');
 
   <div class="inner_container">
     <h1>Admin Login</h1>
+    <div class="account-type">
+      <a href="/">as Parent</a><a href="/admin/create">as Administrator</a>
+    </div>
     <form action="/admin/session/create" method="POST" class="form_container">
       <fieldset>
         <label for="email">Email</label>

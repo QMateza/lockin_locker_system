@@ -7,7 +7,10 @@ require base_path('views/partials/aside.views.php');
 
   <div class="inner_container">
     <h1>Login</h1>
-    <p>Your space, your locker — signup to get yours.</p>
+    <div class="account-type">
+      <a href="/">as Parent</a><a href="/admin/create">as Administrator</a>
+    </div>
+
     <form action="/session" method="POST" class="form_container">
       <fieldset>
         <label for="email">Email</label>
@@ -19,7 +22,6 @@ require base_path('views/partials/aside.views.php');
       <button type="submit" class="submit_button">Login</button>
     </form>
     <p>Don't have an account yet? <a href="/register">Signup</a></p>
-    <p>Administrator login. <a href="/admin/create">Here</a></p>
   </div>
   <footer>
     <p>Student Locker Booking System. Copyright &#169; <?= date('Y') ?></p>

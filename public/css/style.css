@@ -90,6 +90,30 @@ aside {
   margin-bottom: 0.2em;
 }
 
+.account-type {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.account-type a {
+  width: calc(50% - 0.5em);
+  margin-top: 1em;
+  padding: 1em;
+  text-align: center;
+  background-color: var(--yale-blue);
+  color: var(--lavender-web);
+  border-radius: 5px;
+  border: 1px solid var(--yale-blue);
+}
+
+.account-type a:hover,
+.account-type .active {
+  background-color: var(--lavender-web);
+  color: var(--yale-blue);
+  border: 1px solid var(--yale-blue);
+}
+
 .form_overflow {
   max-height: 300px;
   overflow-y: auto;
@@ -264,6 +288,7 @@ main section {
   border: none;
   border-radius: 6px;
   background-color: red;
+  color: white;
 }
 
 .locker-btn .success {
