@@ -25,7 +25,7 @@ class LoginForm
     $instance = new static($attributes); //LoginForm()
 
     if ($instance->failed()) { // 4. checking if LoginForm() has errors.
-      throw new ValidationException();
+      // throw (new ValidationException());
     }
 
     return $instance;
