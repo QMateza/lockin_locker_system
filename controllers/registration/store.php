@@ -2,9 +2,9 @@
 
 
 
+use Core\Email;
 use Core\Database;
 use Core\Validator;
-use Core\Authenticator;
 
 $title = $_POST['title'];
 $name = $_POST['name'];
@@ -55,7 +55,7 @@ $last_name = end($name_parts);
 
 $db = new Database();
 
-$user = $db->query('select * from parent where email_address = :email', [
+$user = $db->query('select * from parent where email = :email', [
   ':email' => $email
 ])->find();
 
@@ -63,7 +63,7 @@ if ($user) {
   header('location: /');
   die();
 } else {
-  $db->query('insert into parent(title, id_number, first_name, last_name, email_address, home_address, phone_number, password) values (:title, :id_number, :first_name, :last_name, :email, :home_address, :phone_number, :password)', [
+  $db->query('insert into parent(title, id_number, first_name, last_name, email, home_address, phone_number, password) values (:title, :id_number, :first_name, :last_name, :email, :home_address, :phone_number, :password)', [
     ':title' => $title,
     ':id_number' => $id_number,
     ':first_name' => $first_name,
@@ -74,8 +74,7 @@ if ($user) {
     'password' => password_hash($password, PASSWORD_BCRYPT)
   ]);
 
-  // $auth = new Authenticator();
-  // $auth->login($user);
+  (new Email())->sendRegistrationEmail($email, $first_name);
 
   header('location: /');
   die();

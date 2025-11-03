@@ -1,6 +1,7 @@
 <?php
 
 use Core\Database;
+use Core\Email;
 
 $db = new Database();
 
@@ -20,10 +21,24 @@ if ($_POST['action'] === 'approve') {
   ]);
 }
 
-
 $db->query('delete from waitinglist where student_number = :student_number', [
   ':student_number' => $_POST['student_number']
 ]);
 
-header('/');
+$result = $db->query(
+  'select 
+                        p.email as parent_email, 
+                        s.first_name as student_first_name
+                        from parent p 
+                        join student s 
+                        ON s.parent_id = p.parent_id 
+                        WHERE s.student_number = :student_number',
+  [
+    ':student_number' => $_POST['student_number']
+  ]
+)->find();
+
+(new Email)->sendWaitingListUpdateEmail($result['parent_email'], $result['student_first_name'], $_GET['locker_id'], $_POST['action']);
+
+header('location: /');
 die();
